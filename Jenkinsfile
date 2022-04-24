@@ -5,7 +5,7 @@ pipeline {
         disableConcurrentBuilds()
     }
     environment{
-        registry = chash07/capstone_project2
+        registry = "chash07/capstone_project2"
         registryCredential = "dockerhub"
     }
 
