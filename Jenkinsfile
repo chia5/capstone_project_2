@@ -50,7 +50,8 @@ pipeline {
         stage('Push To Test Env'){
             agent {label 'Test'}
             steps{
-                sh "docker run -d -p 80:80 chash07/capstone_project2:V$BUILD_NUMBER"
+                //sh "docker rm -f Apache2
+                sh "docker run -d --name Apache2 -p 80:80 chash07/capstone_project2:V$BUILD_NUMBER"
                 echo "Website Deployed on K8s"
             }
         }
